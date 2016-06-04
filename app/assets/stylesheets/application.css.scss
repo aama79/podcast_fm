@@ -98,13 +98,13 @@ body {
    }
 }
 .podcast_banner {
-   background-image: url(../images/banner.jpg);
+   background-image: image-url('banner.jpg');
 }
 .sing_in_banner {
-   background-image: url(../images/sing-in-banner.jpg);
+   background-image: image-url('sing-in-banner.jpg');
 }
 .sing_up_banner {
-   background-image: url(../images/sing-up-banner.jpg);
+   background-image: image-url('sing-up-banner.jpg');
 }
 .pagination:before, .pagination:after {
    content: " ";
@@ -166,4 +166,4 @@ textarea {
 
 @import "normalize";
 @import "welcome";
-//@import "podcasts";
+@import "podcasts";
