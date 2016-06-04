@@ -1,0 +1,69 @@
+<div id="podcast_show">
+      <div id="show_banner">
+         <div class="wrapper_skinny">
+            <h1><%= @podcast.title %></h1>
+            <p class="description"><%= @podcast.description %></p>
+            <% unless @podcast.itunes.blank? %>
+            <a href="<%= @podcast.itunes %>" class="subscribe_link">iTunes</a>
+            <% end %>
+            <% unless @podcast.stitcher.blank? %>
+            <a href="<%= @podcast.stitcher %>" class="subscribe_link">Stitcher</a>
+            <% end %>
+            <% unless @podcast.podbay.blank? %>
+            <a href="<%= @podcast.podbay %>" class="subscribe_link">PodBay</a>
+            <% end %>
+         </div>
+      </div>
+      <div id="breadcrumb">
+        <%= link_to podcasts_path do %>
+          All PodCast <span>/</span>The Rocketship PodCast
+        <% end %>
+      </div>
+      <div id="episodes">
+         <div class="wrapper_skinny">
+            <ul class="cf">
+               <li class="cf">
+                  <div class="episode_thumbnail">
+                     <a href="episode.html">
+                        <img src="images/peter_reinhardt.png" alt="Peter Reinhardt">
+                     </a>
+                  </div>
+                  <div class="episode_overview">
+                     <h2><a href="episode.html">It's so much easier to figure out what people want once you have even a few customers using your product.</a></h2>
+                     <p class="description">Peter Reinhardt, co-founder and CEO of Segment, talks about the early days and finding their way to the current iteration of Segment. It's a great lesson in testing your ideas in the market.</p>
+                  </div>
+               </li>
+
+               <li class="cf">
+                  <div class="episode_thumbnail">
+                     <a href="episode.html">
+                        <img src="images/peter_levels.jpg" alt="Peter Levels">
+                     </a>
+                  </div>
+                  <div class="episode_overview">
+                     <h2><a href="episode.html">I'm Pieter Levels, the maker of Nomad List which lets you find the best places to live and work.</a></h2>
+                     <p class="description">I make Nomad List and am now learning 3d. I travel to work from anywhere, bootstrap companies and only own what fits in my backpack. I also made 12 startups in 12 months. Sometimes I speak at events and maybe at yours. Before, I made a YouTube w/ 100+ mln views. </p>
+                  </div>
+               </li>
+
+               <li class="cf">
+                  <div class="episode_thumbnail">
+                     <a href="episode.html">
+                        <img src="images/peter_reinhardt.png" alt="Peter Reinhardt">
+                     </a>
+                  </div>
+                  <div class="episode_overview">
+                     <h2><a href="episode.html">It's so much easier to figure out what people want once you have even a few customers using your product.</a></h2>
+                     <p class="description">Peter Reinhardt, co-founder and CEO of Segment, talks about the early days and finding their way to the current iteration of Segment. It's a great lesson in testing your ideas in the market.</p>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="pagination">
+         <span class="previous_page disable">Anterior</span>
+            <em class="current">1</em>
+            <a href="#">2</a>
+            <a href="#" class="next_page">Siguiente</a>
+   </div>

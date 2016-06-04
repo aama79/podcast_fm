@@ -1,0 +1,20 @@
+<div id="banner" class="podcast_banner">
+        <h1>Descrubre tus nuevos podcast favoritos</h1>
+    </div>
+    <div id="podcast" class="cf">
+      <div class="wrapper">
+         <ul>
+           <% @podcasts.each do |podcast| %>
+               <%= link_to podcast do %>
+                 <li>
+                  <img src="images/narwhals.jpg" alt="Norwhal PodCast">
+                  <div class="podcast_overview">
+                     <h2><% podcast.title %></h2>
+                     <p class="episode_count">Episodio 1</p>
+                  </div>
+               </li>
+               <% end %>
+           <% end %>
+         </ul>
+      </div>
+   </div>
