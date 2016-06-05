@@ -3,17 +3,11 @@
            <div class="wrapper_wide">
              <a href="#" id="logo">PodCast.fm</a>
             <nav>
-                 <ul>
-                   <% unless podcast_signed_in? %>
-                    <li><%= link_to "Descubre", podcasts_path %></li>
-                    <li><%= link_to "Iniciar Sesion", new_podcast_session_path %></li>
-                    <li><%= link_to "Crear un Podcast", new_podcast_registration_path %></li>
-                    <% else %>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><%= link_to "Descubre", podcasts_path %></li>
-                    <li><%= link_to "Cerrar Sesion", destroy_podcast_session_path, method: :delete %></li>
-                    <% end %>
-                 </ul>
+              <ul>
+                 <li><%= link_to "Descubre", podcasts_path %></li>
+                 <li><%= link_to "Iniciar Sesion", new_podcast_session_path %></li>
+                 <li><%= link_to "Crear Podcast", new_podcast_registration_path %></li>
+             </ul>
             </nav>
            </div>
         </header>

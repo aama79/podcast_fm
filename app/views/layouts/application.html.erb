@@ -29,7 +29,7 @@
                   <li><%= link_to "Iniciar Sesion", new_podcast_session_path %></li>
                   <li><%= link_to "Crear un Podcast", new_podcast_registration_path %></li>
                   <% else %>
-                  <li><a href="#">Dashboard</a></li>
+                  <li><%= link_to "Dashboard", root_path %></li>
                   <li><%= link_to "Descubre", podcasts_path %></li>
                   <li><%= link_to "Cerrar Sesion", destroy_podcast_session_path, method: :delete %></li>
                   <% end %>
