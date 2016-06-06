@@ -1,4 +1,6 @@
 class EpisodesController < ApplicationController
+  before_action :authenticate_podcast!, expcet: [:show]
+  before_filter :require_permission
   before_action :find_podcast
   before_action :find_episode, only: [:show, :edit, :update, :destroy]
 
@@ -43,5 +45,11 @@ class EpisodesController < ApplicationController
   end
   def find_episode
     @episode = Episode.find(params[:id])
+  end
+  def require_permission
+    @podcast = Podcast.find(params[:podcast_id])
+    if current_podcast != @podcast
+      redirect_to root_path, notice: "Lo siento, no tienes acceso para ver esta pagina"
+    end
   end
 end
