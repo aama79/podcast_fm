@@ -3,12 +3,12 @@
     </div>
     <div id="podcast" class="cf">
       <div class="wrapper">
-         <ul>
+         <ul class="cf">
            <% @podcasts.each do |podcast| %>
                <%= link_to podcast do %>
                  <li>
                   <%= image_tag podcast.thumbnail.url(:medium) %>
-                  
+
                   <div class="podcast_overview">
                      <h2><% podcast.title %></h2>
                      <p class="episode_count">Episodio 1</p>
@@ -17,5 +17,7 @@
                <% end %>
            <% end %>
          </ul>
+         
+         <%= will_paginate @podcasts, previous_label: "Anterior", next_label: "Siguiente" %>
       </div>
    </div>
