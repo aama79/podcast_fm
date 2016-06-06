@@ -19,25 +19,9 @@
   </p>
 <% end %>
 
-<header id="main_header" class="cf">
-      <div class="wrapper_wide">
-        <%= link_to "Podcast.fm", root_path, id: "logo" %>
-           <nav>
-               <ul>
-                 <% unless podcast_signed_in? %>
-                  <li><%= link_to "Descubre", podcasts_path %></li>
-                  <li><%= link_to "Iniciar Sesion", new_podcast_session_path %></li>
-                  <li><%= link_to "Crear un Podcast", new_podcast_registration_path %></li>
-                  <% else %>
-                  <li><%= link_to "Dashboard", root_path %></li>
-                  <li><%= link_to "Descubre", podcasts_path %></li>
-                  <li><%= link_to "Cerrar Sesion", destroy_podcast_session_path, method: :delete %></li>
-                  <% end %>
-               </ul>
-           </nav>
-      </div>
-   </header>
-
+<% unless current_page?(root_path) %>
+<%= render 'layouts/header'; %>
+<% end %>
 <%= yield %>
 
 </body>
